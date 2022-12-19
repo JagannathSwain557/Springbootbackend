@@ -8,12 +8,19 @@
 		"0503552c-0c90-cc95-a971-9675f320e07f",
 		"9714d4b1-27e5-9de7-6bca-c593b2b45922",
 		"08dac930-6995-9689-7b7f-ce794738bda7",
+		"f8ac2d26-5a12-3f4e-cc56-873ba58e26fc",
+		"3fccf6c7-f8a9-f60d-f091-d7737db18f56",
 		"91a604c8-cb0c-0471-78f4-a6dc54af4139",
 		"65036359-99d7-23e6-3e30-c4c88d511854",
 		"483dc17e-4c8e-c16d-c693-abd6e5d1b407",
 		"04180bd8-eb7a-2424-42cd-73d01fedd2c5",
 		"1566b3b3-0081-b502-99ab-8e025e4f356e",
-		"7039121e-37db-725e-8699-1635b4799696"
+		"58cd1c6b-4b29-0564-afba-80a95e673c65",
+		"dfc4d55b-f9f9-0b7e-0d3a-85772a96be56",
+		"7039121e-37db-725e-8699-1635b4799696",
+		"71f356da-7da5-4da6-43e4-d9358d7495b8",
+		"dc41848a-765d-5558-a74b-b1e35866749e",
+		"317f0665-a5f0-d6b1-146b-5c3f9719d8c6"
 	],
 	"folders": [],
 	"folders_order": [],
@@ -133,6 +140,58 @@
 			"rawModeData": "    {\n       \n        \"fullName\": \"Jagahgfs\",\n        \"userName\": \"Jagahgfs\",\n        \"country\": \"dfcom\",\n        \"state\": \"jdhjf\",\n        \"city\": \"dfs\",\n        \"pin\": \"45411\",\n        \"address\": \"fds\",\n      \n        \"phoneNo\": \"54645455\",\n        \"email\": \"fsfsd\",\n        \"adharNo\": \"sdfs\",\n        \"imageChangePermission\": \"fsdfd\",\n       \"refPerson\": \"sfd\",\n       \"refPhone\": \"dsf\",\n       \"token_id\": \"4255\",\n       \"o_id\": \"425\"\n    }"
 		},
 		{
+			"id": "317f0665-a5f0-d6b1-146b-5c3f9719d8c6",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8081/v1/autohome/owner/update/5705808872472576",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PUT",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1671430546497,
+			"name": "updateOwner",
+			"description": "",
+			"collectionId": "07c00588-9045-bc73-e97a-50a4a5587dfc",
+			"responses": [],
+			"rawModeData": "  {\n        \"fullName\": \"Debuswain\",\n        \"organization\": \"Jagah251gfs\",\n        \"country\": \"dfcom\",\n        \"state\": \"jdhjf\",\n        \"city\": \"dfs\",\n        \"pin\": 45411,\n        \"startedFrom\": \"2012-05-11T18:30:00.000+00:00\",\n        \"location\": \"bbsr\",\n        \"mobileNo\": 45422,\n        \"altMobile\": 5422455,\n        \"o_type\": \"kjhg\",\n        \"email\": \"bbsr@gmail.com\",\n        \"adharNo\": 1212178,\n        \"endDate\": \"2011-07-12T18:30:00.000+00:00\",\n        \"createdDate\": \"2011-06-11T18:30:00.000+00:00\",\n        \"tokenSeries\": \"fsdfd\",\n        \"totalSeats\": 652,\n        \"availableSeats\": 5656,\n        \"tokenMap\": null,\n        \"maxRange\": \"10102125\",\n        \"minRange\": \"sdf\",\n        \"rm_types\": \"sdfb\",\n        \"rating_avg\": \"45652\",\n        \"disabled\": \"sd\"\n       \n    }"
+		},
+		{
+			"id": "3fccf6c7-f8a9-f60d-f091-d7737db18f56",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8081/v1/autohome/owner/getall",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1671430390050,
+			"name": "getAllOwner",
+			"description": "",
+			"collectionId": "07c00588-9045-bc73-e97a-50a4a5587dfc",
+			"responses": []
+		},
+		{
 			"id": "483dc17e-4c8e-c16d-c693-abd6e5d1b407",
 			"headers": "",
 			"headerData": [],
@@ -201,6 +260,36 @@
 			"rawModeData": ""
 		},
 		{
+			"id": "58cd1c6b-4b29-0564-afba-80a95e673c65",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8081/v1/autohome/owner-customer/create",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1671437614663,
+			"name": "createCustomer_Owner",
+			"description": "",
+			"collectionId": "07c00588-9045-bc73-e97a-50a4a5587dfc",
+			"responses": [],
+			"rawModeData": "    {\n       \n        \"c_id\": \"1202\",\n        \"o_id\": \"1200\",\n        \"startedFrom\": \"15-05-2012\",\n        \"endedOn\": \"20-05-2012\",\n        \"fixedRent\": \"120.05\",\n        \"securityDeposit\": \"150.05\",\n        \"isExisting\": \"true\"\n    }"
+		},
+		{
 			"id": "62c7f5c3-c846-cdc9-440c-2d3e32596139",
 			"headers": "Content-Type: application/json\n",
 			"headerData": [
@@ -263,7 +352,7 @@
 					"enabled": true
 				}
 			],
-			"url": "http://localhost:8081/webportal/customer/create",
+			"url": "http://localhost:8081/v1/autohome/customer/update/5678677161410560",
 			"queryParams": [],
 			"preRequestScript": null,
 			"pathVariables": {},
@@ -275,12 +364,42 @@
 			"tests": null,
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1671270162844,
+			"time": 1671430373724,
 			"name": "updateCustomer",
 			"description": "",
 			"collectionId": "07c00588-9045-bc73-e97a-50a4a5587dfc",
 			"responses": [],
-			"rawModeData": "    {\n        \"c_id\": 433576526,\n        \"fullName\": \"Jagahgfs\",\n        \"userName\": \"Jagahgfs\",\n        \"country\": \"dfcom\",\n        \"state\": \"jdhjf\",\n        \"city\": \"dfs\",\n        \"pin\": \"45411\",\n        \"address\": \"fds\",\n      \n        \"phoneNo\": \"54645455\",\n        \"email\": \"fsfsd\",\n        \"adharNo\": \"sdfs\",\n        \"imageChangePermission\": \"fsdfd\",\n       \"refPerson\": \"sfd\",\n       \"refPhone\": \"dsf\",\n       \"token_id\": \"4255\",\n       \"o_id\": \"425\"\n    }"
+			"rawModeData": "     {\n        \"fullName\": \"Jaga  kj\",\n        \"country\": \"dfcom\",\n        \"state\": \"jdhjf\",\n        \"city\": \"dfs\",\n        \"pin\": 45411,\n        \"address\": \"fds\",\n        \"dob\": \"2012-05-14T18:30:00.000+00:00\",\n        \"mobileNo\": 5422645455,\n        \"email\": \"bbsr@gmail.com\",\n        \"adharNo\": 1212121245454578,\n        \"createdDate\": \"2014-05-13T18:30:00.000+00:00\",\n        \"imageChangePermission\": true,\n        \"refPerson\": \"kjh\",\n        \"refPhone\": 10125,\n        \"token_id\": \"fcvbn\",\n        \"o_id\": 42636232\n    }"
+		},
+		{
+			"id": "71f356da-7da5-4da6-43e4-d9358d7495b8",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8081/v1/autohome/owner-customer/update/1203",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PUT",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1671446363892,
+			"name": "updateCustomerOwner",
+			"description": "",
+			"collectionId": "07c00588-9045-bc73-e97a-50a4a5587dfc",
+			"responses": [],
+			"rawModeData": "     {     \n     \t\"c_id\": \"1203\",\n        \"o_id\": \"1200\",\n        \"startedFrom\": \"15-05-2012\",\n        \"endedOn\": \"20-05-2012\",\n        \"fixedRent\": \"120.05\",\n        \"securityDeposit\": \"150.05\",\n        \"isExisting\": \"true\"\n    }"
 		},
 		{
 			"id": "91a604c8-cb0c-0471-78f4-a6dc54af4139",
@@ -322,6 +441,88 @@
 			"helperAttributes": {},
 			"time": 1669975477927,
 			"name": "getAllEnquery",
+			"description": "",
+			"collectionId": "07c00588-9045-bc73-e97a-50a4a5587dfc",
+			"responses": []
+		},
+		{
+			"id": "dc41848a-765d-5558-a74b-b1e35866749e",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8081/v1/autohome/owner-customer/updateByOid/1203",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PUT",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1671446409610,
+			"name": "updateCustomerOid",
+			"description": "",
+			"collectionId": "07c00588-9045-bc73-e97a-50a4a5587dfc",
+			"responses": [],
+			"rawModeData": "     {\n        \"fullName\": \"Jaga  kj\",\n        \"country\": \"dfcom\",\n        \"state\": \"jdhjf\",\n        \"city\": \"dfs\",\n        \"pin\": 45411,\n        \"address\": \"fds\",\n        \"dob\": \"2012-05-14T18:30:00.000+00:00\",\n        \"mobileNo\": 5422645455,\n        \"email\": \"bbsr@gmail.com\",\n        \"adharNo\": 1212121245454578,\n        \"createdDate\": \"2014-05-13T18:30:00.000+00:00\",\n        \"imageChangePermission\": true,\n        \"refPerson\": \"kjh\",\n        \"refPhone\": 10125,\n        \"token_id\": \"fcvbn\",\n        \"o_id\": 426\n    }"
+		},
+		{
+			"id": "dfc4d55b-f9f9-0b7e-0d3a-85772a96be56",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8081/v1/autohome/owner/create",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1671298070822,
+			"name": "createOwner",
+			"description": "",
+			"collectionId": "07c00588-9045-bc73-e97a-50a4a5587dfc",
+			"responses": [],
+			"rawModeData": "  {\n     \n     \n        \"fullName\": \"Jagfs  kj\",\n        \"organization\": \"Jagah251gfs\",\n        \"country\": \"dfcom\",\n        \"state\": \"jdhjf\",\n        \"city\": \"dfs\",\n        \"pin\": \"45411\",\n        \"startedFrom\": \"fds\",\n        \"location\": \"bbsr\",\n        \"mobileNo\":\"oijh\",\n        \"altMobile\": \"5422645455\",\n        \"o_type\": \"bbsr@gmail.com\",\n        \"email\": \"iujhg\",\n        \"adharNo\": \"1212121245454578\",\n        \"tokenSeries\": \"fsdfd\",\n        \"totalSeats\": \"kjh\",\n        \"maxRange\": \"10102125\",\n        \"minRange\": \"sdf\",\n        \"rm_types\": \"sdfb\",\n        \"rating_avg\": \"45652\",\n        \"disabled\": \"sd\"\n       \n    }"
+		},
+		{
+			"id": "f8ac2d26-5a12-3f4e-cc56-873ba58e26fc",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8081/v1/autohome/owner-customer/getall",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1671437630372,
+			"name": "getAllCustomerOwner",
 			"description": "",
 			"collectionId": "07c00588-9045-bc73-e97a-50a4a5587dfc",
 			"responses": []
