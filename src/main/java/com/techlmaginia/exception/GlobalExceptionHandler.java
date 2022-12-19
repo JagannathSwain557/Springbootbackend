@@ -16,22 +16,22 @@ import com.techlmaginia.dto.ExceptionDto;
 
 @ControllerAdvice
 @RestController
-public class EnquiryExceptionHandler extends ResponseEntityExceptionHandler {
+public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
 	@ExceptionHandler(Exception.class)
 	public final ResponseEntity<Object> handleAllExceptions(Exception ex, WebRequest request) {
-		ExceptionDto exceptionResponse = new ExceptionDto(new Date(), ex.getMessage(), request.getDescription(false));
+		ExceptionDto exceptionResponse = new ExceptionDto(new Date(), ex.getMessage(),ex.getStackTrace().toString(), request.getDescription(false));
 		return new ResponseEntity(exceptionResponse, HttpStatus.INTERNAL_SERVER_ERROR);
 	}
 
 	@ExceptionHandler(ResourceNotFoundException.class)
 	public ResponseEntity<Object> handleUserNotFoundExceptions(ResourceNotFoundException ex, WebRequest request) {
-		ExceptionDto exceptionResponse = new ExceptionDto(new Date(), ex.getMessage(), request.getDescription(false));
+		ExceptionDto exceptionResponse = new ExceptionDto(new Date(), ex.getMessage(),ex.getStackTrace().toString(), request.getDescription(false));
 		return new ResponseEntity(exceptionResponse, HttpStatus.NOT_FOUND);
 	}
 
 	protected ResponseEntity<Object> handleMethodArgumentNotValid(MethodArgumentNotValidException ex,
 			HttpHeaders headers, HttpStatus status, WebRequest request) {
-		ExceptionDto exceptionResponse = new ExceptionDto(new Date(), ex.getMessage(),
+		ExceptionDto exceptionResponse = new ExceptionDto(new Date(), ex.getMessage(),ex.getStackTrace().toString(),
 				ex.getBindingResult().toString());
 		return new ResponseEntity(exceptionResponse, HttpStatus.BAD_REQUEST);
 	}

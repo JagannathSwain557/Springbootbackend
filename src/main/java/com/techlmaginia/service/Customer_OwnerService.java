@@ -6,11 +6,13 @@ import java.util.ArrayList;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.techlmaginia.dto.CustomerDto;
 import com.techlmaginia.dto.Customer_OwnerDto;
 import com.techlmaginia.model.CustomerEntity;
 import com.techlmaginia.model.Customer_OwnerEntity;
+import com.techlmaginia.repository.CustomerRepository;
 import com.techlmaginia.repository.Customer_OwnerRepository;
 
 @Service
@@ -18,9 +20,15 @@ public class Customer_OwnerService {
 	@Autowired
 	Customer_OwnerRepository cusOwnRep;
 	
+	@Autowired
+	CustomerRepository custRepo;
 
+	@Transactional
 	public Customer_OwnerEntity saveCustomerOwner(Customer_OwnerDto cusOwnDto) throws ParseException {
 		Customer_OwnerEntity savedCustomerOwn = cusOwnRep.save(new Customer_OwnerEntity(cusOwnDto));
+		CustomerEntity customer=custRepo.costomerByC_id(Long.parseLong(cusOwnDto.getC_id()));
+		customer.setO_id(Long.parseLong(cusOwnDto.getO_id()));
+		custRepo.save(customer);
 		return savedCustomerOwn;
 	}
 
@@ -33,7 +41,7 @@ public class Customer_OwnerService {
 
 	public Customer_OwnerEntity updateCustomerOwner(Customer_OwnerDto ownerCusDetails, Long c_o_id) throws ParseException {
 		SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
-		Customer_OwnerEntity ownerCus = cusOwnRep.findById(c_o_id).orElseThrow();
+		Customer_OwnerEntity ownerCus = cusOwnRep.findById(c_o_id).get();
 		if (ownerCusDetails.getO_id() != null && !ownerCusDetails.getO_id().isEmpty()) {
 			ownerCus.setO_id(Long.parseLong(ownerCusDetails.getO_id()));
 		}
@@ -59,18 +67,7 @@ public class Customer_OwnerService {
 		return updatedCusOwner;
 	}
 	
-	public Customer_OwnerEntity updateCusOid(Customer_OwnerDto cosDto,Long o_c_id)
-	{
-		//CustomerEntity cos=cos.findById(c_id);
-		
-		Customer_OwnerEntity ownerCus = cusOwnRep.findById(o_c_id).orElseThrow();
-		
-		if (cosDto.getO_id() != null && !cosDto.getO_id().isEmpty()) {
-			ownerCus.setO_id(Long.parseLong(cosDto.getO_id()));
-		}
-		Customer_OwnerEntity updatedCusOwner = cusOwnRep.save(ownerCus);
-		return updatedCusOwner;
-	}
+	
 
 	
 }

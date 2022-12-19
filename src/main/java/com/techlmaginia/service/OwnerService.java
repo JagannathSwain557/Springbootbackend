@@ -28,16 +28,48 @@ public class OwnerService {
 		owners.forEach(b -> ownerList.add(b));
 		return ownerList;
 	}
-	/*
-	 * public List<OwnerEntity> getCustomerByOid(Long o_id) { Iterable<OwnerEntity>
-	 * customers = ownRep.ownerByO_id(o_id); ArrayList customerList = new
-	 * ArrayList(); customers.forEach(b -> customerList.add(b)); return
-	 * customerList; }
-	 */
+	
+	  public List<OwnerEntity> searchOwnersByParams(OwnerDto owner) {
+		  StringBuilder sb=new StringBuilder("select * from OwnerEntity where availableSeats >1  ");
+		  
+		  if(owner.getCity()!=null&&!owner.getCity().isEmpty()){
+			  sb.append(" and city ='"+owner.getCity()+"'");
+		  }
+		  if(owner.getPin()!=null&&!owner.getPin().isEmpty()){
+			  sb.append(" and pin ="+owner.getPin());
+		  }
+		  if(owner.getO_type()!=null&&!owner.getO_type().isEmpty()){
+			  sb.append(" and o_type ='"+owner.getO_type()+"'");
+		  }
+		  if(owner.getTokenSeries()!=null&&!owner.getTokenSeries().isEmpty()){
+			  sb.append(" and tokenSeries ='"+owner.getTokenSeries()+"'");
+		  }
+		  
+		  if(owner.getMaxRange()!=null&&!owner.getMaxRange().isEmpty()){
+			  sb.append(" and maxRange<="+owner.getMaxRange());
+		  }
+		  if(owner.getMinRange()!=null&&!owner.getMinRange().isEmpty()){
+			  sb.append(" and minRange>="+owner.getMinRange());
+		  }
+		  if(owner.getRm_types()!=null&&!owner.getRm_types().isEmpty()){
+			  sb.append(" and rm_types='"+owner.getRm_types()+"'");
+		  }
+		  sb.append(" and disabled="+false);
+		  if(owner.getMinRange()!=null&&!owner.getMinRange().isEmpty()){
+			  sb.append(" order by rating_avg");
+		  }
+		  System.out.println("QUERY ===="+sb.toString());
+		  Iterable<OwnerEntity>owners = ownRep.searchOwnersByParams(sb.toString());
+		  ArrayList<OwnerEntity> customerList = new ArrayList<OwnerEntity>();
+		  owners.forEach(b -> customerList.add(b));
+		  
+		  return customerList; 
+	  }
+	 
 
 	public OwnerEntity updateOwner(OwnerDto ownerDetails, Long o_id) throws ParseException {
 		SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
-		OwnerEntity owner = ownRep.findById(o_id).orElseThrow();
+		OwnerEntity owner = ownRep.findById(o_id).get();
 		if (ownerDetails.getFullName() != null && !ownerDetails.getFullName().isEmpty()) {
 			owner.setFullName(ownerDetails.getFullName());
 		}

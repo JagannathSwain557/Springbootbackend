@@ -241,8 +241,8 @@ public class OwnerEntity {
 		this.o_type = ownDto.getO_type();
 		this.email = ownDto.getEmail();
 		this.adharNo = Long.parseLong(ownDto.getAdharNo());
-		this.endDate = sdf.parse(ownDto.getEndDate());	
-		this.createdDate = sdf.parse(ownDto.getCreatedDate());	
+		this.endDate = new Date();	
+		this.createdDate = new Date();	
 		this.tokenSeries = ownDto.getTokenSeries();
 		this.totalSeats = Integer.parseInt(ownDto.getTotalSeats());
 		this.availableSeats =Integer.parseInt(ownDto.getAvailableSeats());

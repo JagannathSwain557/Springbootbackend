@@ -40,7 +40,7 @@ public class CustomerService {
 
 	public CustomerEntity updateCustomer(CustomerDto customerDetails, Long c_id) throws ParseException {
 		SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
-		CustomerEntity customer = cosRep.findById(c_id).orElseThrow();
+		CustomerEntity customer = cosRep.findById(c_id).get();
 
 		if (customerDetails.getFullName() != null && !customerDetails.getFullName().isEmpty()) {
 			customer.setFullName(customerDetails.getFullName());

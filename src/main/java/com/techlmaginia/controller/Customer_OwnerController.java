@@ -18,11 +18,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.techlmaginia.dto.Customer_OwnerDto;
-import com.techlmaginia.dto.OwnerDto;
 import com.techlmaginia.model.Customer_OwnerEntity;
-import com.techlmaginia.model.OwnerEntity;
 import com.techlmaginia.service.Customer_OwnerService;
-import com.techlmaginia.service.OwnerService;
 
 @RestController
 @RequestMapping(value = "/v1/autohome")
@@ -53,11 +50,6 @@ public class Customer_OwnerController {
 		Customer_OwnerEntity cusOwnEntity = cosOwnerService.updateCustomerOwner(cusOwnerDetails, c_o_id);
 		return new ResponseEntity<Customer_OwnerEntity>(cusOwnEntity, HttpStatus.OK);
 	}
-	@PutMapping("/owner-customer/updateByOid/{o_c_id}")
-	public ResponseEntity<Customer_OwnerEntity> updateCustomerOid(@PathVariable(value = "o_c_id") Long o_c_id,
-			@RequestBody Customer_OwnerDto cusOwnerDetails) throws ParseException {
-		Customer_OwnerEntity cusOwnEntity = cosOwnerService.updateCusOid(cusOwnerDetails, o_c_id);
-		return new ResponseEntity<Customer_OwnerEntity>(cusOwnEntity, HttpStatus.OK);
-	}
+	
 	
 }

@@ -5,15 +5,8 @@ import java.util.Date;
 public class ExceptionDto {
 	 Date date;
 	 String message;
-	
+	 String details;
 	String statusCode;
-	 public ExceptionDto(Date date, String message, String statusCode) {
-			super();
-			this.date = date;
-			this.message = message;
-			this.statusCode = statusCode;
-		}
-	
 	public Date getDate() {
 		return date;
 	}
@@ -27,10 +20,30 @@ public class ExceptionDto {
 		this.message = message;
 	}
 	public String getDetails() {
+		return details;
+	}
+	public void setDetails(String details) {
+		this.details = details;
+	}
+	public String getStatusCode() {
 		return statusCode;
 	}
-	public void setDetails(String statusCode) {
+	public void setStatusCode(String statusCode) {
 		this.statusCode = statusCode;
 	}
+	public ExceptionDto(Date date, String message, String details, String statusCode) {
+		super();
+		this.date = date;
+		this.message = message;
+		this.details = details;
+		this.statusCode = statusCode;
+	}
+	public ExceptionDto() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+	
 	
 }

@@ -179,7 +179,7 @@ public class CustomerEntity {
 		this.mobileNo =  Long.parseLong(cosDto.getMobileNo());
 		this.email = cosDto.getEmail();
 		this.adharNo = Long.parseLong(cosDto.getAdharNo());
-		this.createdDate = sdf.parse(cosDto.getCreatedDate());	
+		this.createdDate = new Date();	
 		this.imageChangePermission = Boolean.parseBoolean(cosDto.getImageChangePermission());
 		this.refPerson = cosDto.getRefPerson();
 		this.refPhone =Long.parseLong(cosDto.getRefPhone());

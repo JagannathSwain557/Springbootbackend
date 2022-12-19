@@ -19,7 +19,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.techlmaginia.dto.OwnerDto;
 import com.techlmaginia.model.OwnerEntity;
-import com.techlmaginia.repository.CustomerRepository;
 import com.techlmaginia.service.OwnerService;
 
 @RestController
@@ -44,12 +43,12 @@ public class OwnerController {
 	public ResponseEntity<List<OwnerEntity>> getAllOwners() {
 		return new ResponseEntity<List<OwnerEntity>>(ownService.getAllOwners(), HttpStatus.OK);
 	}
-/*
-	@GetMapping("/owner/search/{o_id}")
-	public ResponseEntity<List<OwnerEntity>> getCustomerByOid(@PathVariable Long o_id) throws ParseException {
-		return new ResponseEntity<List<OwnerEntity>>(ownService.getCustomerByOid(o_id), HttpStatus.OK);
+
+	@PostMapping("/owner/search")
+	public ResponseEntity<List<OwnerEntity>> searchOwnersByParams(@RequestBody OwnerDto cosDto) throws ParseException {
+		return new ResponseEntity<List<OwnerEntity>>(ownService.searchOwnersByParams(cosDto), HttpStatus.OK);
 	}
-*/
+
 	@PutMapping("/owner/update/{o_id}")
 	public ResponseEntity<OwnerEntity> updateOwner(@PathVariable(value = "o_id") Long o_id,
 			@RequestBody OwnerDto ownerDetails) throws ParseException {

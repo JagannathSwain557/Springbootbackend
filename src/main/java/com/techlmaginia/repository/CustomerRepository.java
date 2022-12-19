@@ -17,5 +17,5 @@ List<CustomerEntity> costomerByO_id(@Param("o_id")Long o_id);
 
 //List<CustomerEntity> findByC_id(Long c_id);
 @Query(value="SELECT * FROM CustomerEntity  WHERE c_id=@c_id")
-List<CustomerEntity> costomerByC_id(@Param("c_id")Long c_id);
+CustomerEntity costomerByC_id(@Param("c_id")Long c_id);
 }
