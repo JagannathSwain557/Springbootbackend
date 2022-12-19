@@ -1,5 +1,7 @@
 package com.techlmaginia.model;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import org.springframework.data.annotation.Id;
@@ -15,18 +17,18 @@ public class CustomerEntity {
 	String country;
 	String state;
 	String city;
-	String pin;
+	int pin;
 	String address;
 	Date dob;
-	String mobileNo;
+	Long mobileNo;
 	String email;
-	String adharNo;
+	Long adharNo;
 	Date createdDate;
-	String imageChangePermission;
+	boolean imageChangePermission;
 	String refPerson;
-	String refPhone;
+	Long refPhone;
 	String token_id;
-	String o_id;
+	Long o_id;
 	public Long getC_id() {
 		return c_id;
 	}
@@ -63,10 +65,10 @@ public class CustomerEntity {
 	public void setCity(String city) {
 		this.city = city;
 	}
-	public String getPin() {
+	public int getPin() {
 		return pin;
 	}
-	public void setPin(String pin) {
+	public void setPin(int pin) {
 		this.pin = pin;
 	}
 	public String getAddress() {
@@ -81,10 +83,10 @@ public class CustomerEntity {
 	public void setDob(Date dob) {
 		this.dob = dob;
 	}
-	public String getMobileNo() {
+	public Long getMobileNo() {
 		return mobileNo;
 	}
-	public void setMobileNo(String mobileNo) {
+	public void setMobileNo(Long mobileNo) {
 		this.mobileNo = mobileNo;
 	}
 	public String getEmail() {
@@ -93,10 +95,10 @@ public class CustomerEntity {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public String getAdharNo() {
+	public Long getAdharNo() {
 		return adharNo;
 	}
-	public void setAdharNo(String adharNo) {
+	public void setAdharNo(Long adharNo) {
 		this.adharNo = adharNo;
 	}
 	public Date getCreatedDate() {
@@ -105,10 +107,10 @@ public class CustomerEntity {
 	public void setCreatedDate(Date createdDate) {
 		this.createdDate = createdDate;
 	}
-	public String getImageChangePermission() {
+	public boolean isImageChangePermission() {
 		return imageChangePermission;
 	}
-	public void setImageChangePermission(String imageChangePermission) {
+	public void setImageChangePermission(boolean imageChangePermission) {
 		this.imageChangePermission = imageChangePermission;
 	}
 	public String getRefPerson() {
@@ -117,10 +119,10 @@ public class CustomerEntity {
 	public void setRefPerson(String refPerson) {
 		this.refPerson = refPerson;
 	}
-	public String getRefPhone() {
+	public Long getRefPhone() {
 		return refPhone;
 	}
-	public void setRefPhone(String refPhone) {
+	public void setRefPhone(Long refPhone) {
 		this.refPhone = refPhone;
 	}
 	public String getToken_id() {
@@ -129,15 +131,15 @@ public class CustomerEntity {
 	public void setToken_id(String token_id) {
 		this.token_id = token_id;
 	}
-	public String getO_id() {
+	public Long getO_id() {
 		return o_id;
 	}
-	public void setO_id(String o_id) {
+	public void setO_id(Long o_id) {
 		this.o_id = o_id;
 	}
 	public CustomerEntity(Long c_id, String fullName, String userName, String country, String state, String city,
-			String pin, String address, Date dob, String mobileNo, String email, String adharNo, Date createdDate,
-			String imageChangePermission, String refPerson, String refPhone, String token_id, String o_id) {
+			int pin, String address, Date dob, Long mobileNo, String email, Long adharNo, Date createdDate,
+			boolean imageChangePermission, String refPerson, Long refPhone, String token_id, Long o_id) {
 		super();
 		this.c_id = c_id;
 		this.fullName = fullName;
@@ -148,8 +150,6 @@ public class CustomerEntity {
 		this.pin = pin;
 		this.address = address;
 		this.dob = dob;
-		
-		
 		this.mobileNo = mobileNo;
 		this.email = email;
 		this.adharNo = adharNo;
@@ -160,39 +160,31 @@ public class CustomerEntity {
 		this.token_id = token_id;
 		this.o_id = o_id;
 	}
-	public CustomerEntity(CustomerDto comDto)
-	{
-		this.c_id=comDto.getC_id();
-		this.fullName=comDto.getFullName();
-		this.userName=comDto.getUserName();
-		this.country=comDto.getCountry();
-		this.state=comDto.getState();
-		this.city=comDto.getCity();
-		this.pin=comDto.getPin();
-		this.address=comDto.getAddress();
-		this.dob=new Date(System.currentTimeMillis());
-		this.mobileNo=comDto.getMobileNo();
-		this.email=comDto.getEmail();
-		this.adharNo=comDto.getAdharNo();
-		this.createdDate=new Date(System.currentTimeMillis());
-		this.imageChangePermission=comDto.getImageChangePermission();
-		this.refPerson=comDto.getRefPerson();
-		this.refPhone=comDto.getRefPhone();
-		this.token_id=comDto.getToken_id();
-		this.o_id=comDto.getO_id();
-	}
+	
 	public CustomerEntity() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	@Override
-	public String toString() {
-		return "CustomerEntity [c_id=" + c_id + ", fullName=" + fullName + ", userName=" + userName + ", country="
-				+ country + ", state=" + state + ", city=" + city + ", pin=" + pin + ", address=" + address + ", dob="
-				+ dob + ", mobileNo=" + mobileNo + ", email=" + email + ", adharNo=" + adharNo + ", createdDate="
-				+ createdDate + ", imageChangePermission=" + imageChangePermission + ", refPerson=" + refPerson
-				+ ", refPhone=" + refPhone + ", token_id=" + token_id + ", o_id=" + o_id + "]";
+	public CustomerEntity(CustomerDto cosDto) throws ParseException {
+		// TODO Auto-generated constructor stub
+		 SimpleDateFormat sdf= new SimpleDateFormat("dd-MM-yyyy");
+		this.fullName = cosDto.getFullName();
+		this.userName = cosDto.getUserName();
+		this.country = cosDto.getCountry();
+		this.state = cosDto.getState();
+		this.city = cosDto.getCity();
+		this.pin = Integer.parseInt(cosDto.getPin());
+		this.address = cosDto.getAddress();
+		this.dob = sdf.parse(cosDto.getDob());	
+		this.mobileNo =  Long.parseLong(cosDto.getMobileNo());
+		this.email = cosDto.getEmail();
+		this.adharNo = Long.parseLong(cosDto.getAdharNo());
+		this.createdDate = sdf.parse(cosDto.getCreatedDate());	
+		this.imageChangePermission = Boolean.parseBoolean(cosDto.getImageChangePermission());
+		this.refPerson = cosDto.getRefPerson();
+		this.refPhone =Long.parseLong(cosDto.getRefPhone());
+		this.token_id = cosDto.getToken_id();
+		this.o_id = Long.parseLong(cosDto.getO_id());
 	}
 	
-
 }

@@ -1,6 +1,7 @@
 package com.techlmaginia.model;
 
 import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import org.springframework.data.annotation.Id;
@@ -108,13 +109,14 @@ public class EnquiryEntity {
 		this.content = enqDto.getContent();
 		this.createdDate = new Date(System.currentTimeMillis());
 		/*
-		 * String startDate=enqDto.getDate(); // Input String SimpleDateFormat sdf1 =
-		 * new SimpleDateFormat("dd-MM-yyyy"); // New Pattern java.util.Date date =
-		 * sdf1.parse(startDate); // Returns a Date format object with the pattern
-		 * java.sql.Date sqlStartDate = new java.sql.Date(date.getTime());
-		 * this.createdDate=sqlStartDate;
-		 */
-
+		  String startDate=enqDto.getDate(); // Input String SimpleDateFormat sdf1 =
+		  SimpleDateFormat sdf= new SimpleDateFormat("dd-MM-yyyy");
+		 
+		  sdf.parse(startDate); // Returns a Date format object with the pattern
+		  java.sql.Date sqlStartDate = new java.sql.Date(date.getTime());
+		  this.createdDate=sqlStartDate;
+		 
+*/
 	}
 
 	public EnquiryEntity() {

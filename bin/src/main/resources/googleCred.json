@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "techlmaginiabackend",
+  "private_key_id": "366a54972ff98472ac3d284fbd91cddc16d24cb9",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCtgtZzwmce+MGK\ndqwb0422wmIERPB0MftZ1Hjy1h5uRN8WK04SGH11XJ5WXP6J1jp5FgDDyuEZgWPr\nB5txg64gSHA4umnOBbE5cf7lfyYbM8KrIPwQ1K1RntfH6A40ohTkDGvgYr3QZCfx\npI00JAyijGAYnTDeorqGz8PTENnJLYeg/AUQat7dtqVGha8sx7NaXAa15frv/YDw\nWE0OA25AXD9vim6Icc/Zo2uWFdufGuOBj36unfKBIwtPi1X9VzVJp69vE8EruHqp\nBFB1bipgTryceMA1clAHiLyIlztargchuq55oLwjmT0+998YnK2jBK1zKX39yVf7\nVjZLOkqjAgMBAAECggEAEUggUvxQaBHPuRpTzxu1mDfpKlKxfmlCBzL17v3rnwEG\nFT+v8XZ1/HwCm0h8476uKURLRDUPUYqFKLIjxd0fOUDtyICsrCP+AGI9yJ7u7TOt\nFn1dDdIZBzGifVs8GvrvyL0B+6HqFPj8z4EbvU8/4OrJYXo6lVow6N+Fuh6KCpLv\niT1zBFCD4maPZvZq0+lQ2j1WgtG/nP06lOKiIfxLfITjuFnWJnwRbag5JfhvLkiY\n1kMdTjKXiIwb8tEM9E/Q/bxwt7bvIjLaupjPQIgpwL9t4emVB+/bLNcKNwz0SU0T\nqRUohp5Ck3Y2NqqeSHGEjtoneILRrGLgVptUA2zy5QKBgQDuxAhSKRbRF+aG+cQl\nEdeBPPrJtjD5dQ9mr7Not233f5z34JDM5GlMBpjDyv+XIfikvtnh7upHIU7Wun1+\nYwgCJbeLATfH2V79OWDKMdlOKZa8J/AkPUFut/WZgdRt+kg5U+p1f8NT7iV2+EWc\nPKtR04bngZbho+X3fXyNxkjqlwKBgQC6CQPEt9pUrvNdNKnH+rvtL4zb9zS+YyZv\n+uekNgP7tim6sfS6oUyLDShkDhbAeFuZByXfhqmKvSnwB+fyQdxQ+9byNBqSqVtR\nBdhHjzzXoO94tLdmPThi16y+lXOWPqLAU3pPTNwp/880vYkaZxQ0UohAZcQtClnJ\n+I8ZTWQd1QKBgFmzIeEj+KNzFDMPMGYwzsKJ0znmjX2aQb/1MDSd/N0nfyQMpLmk\n8f4S2F9uKxlvNMdHv/lGVZOFauX2x+Cseby8yLibK4aUHkCJxtgPZDEeJLfpVSl4\nLdXXnJggE1uB1JJc+U9NQWeNp1uLqDMrA73I9vyQTcvVVDbnWNy2anxfAoGAGR54\nfMpaV47b21zuA8uOLmN6QIUrgP2ARiR5vIlylj0te0DmC4EWBbx8FK52UfyuWYZG\njdzv7YTHMdrPbb2I0wJ+Lmvsnprxcoo4fskPbQoU65ZzIQHpKCd48q7ZUZMZhKCA\n5k45eA5LWxKwfXknmD0Amrli+LXqE8RVBhSWDRUCgYA2xQy6c9awQZe37x8bpXd6\nfujqJhK9geNWQePKdiYWepMPpLG0QT/cGHpYynQLsbCyTvdY2brhwRs3wx4WK9Ls\njJf9vdF/ajsLI5ATSk/fEhRutddRYgHaETH+eOStgQuDKCjkM/GBkRJDvlrIW0oQ\nanj7M/ZhFmWZgCAnPqI+bA==\n-----END PRIVATE KEY-----\n",
+  "client_email": "techlmaginiabackend@techlmaginiabackend.iam.gserviceaccount.com",
+  "client_id": "111207110626081114817",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/techlmaginiabackend%40techlmaginiabackend.iam.gserviceaccount.com"
+}

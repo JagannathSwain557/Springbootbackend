@@ -31,7 +31,7 @@ public class CustomerDto {
 	@NotEmpty(message = "please enter address")
 	String address;
 	
-	Date dob;
+	String dob;
 	@NotEmpty(message = "please enter phoneNo")
 	@Size(min = 10, max = 10, message = "10 digit nos only")
 	@Pattern(regexp = "[0-9]+", message = "Only 10 digits nos allowed")
@@ -44,7 +44,7 @@ public class CustomerDto {
 	@Pattern(regexp = "[0-9]+", message = "Only 16 digits nos allowed")
 	String adharNo;
 	
-	Date createdDate;
+	String createdDate;
 	@NotEmpty(message = "please enter imageChangePermission")
 	String imageChangePermission;
 	@NotEmpty(message = "please enter refPerson")
@@ -109,10 +109,10 @@ public class CustomerDto {
 	public void setAddress(String address) {
 		this.address = address;
 	}
-	public Date getDob() {
+	public String getDob() {
 		return dob;
 	}
-	public void setDob(Date dob) {
+	public void setDob(String dob) {
 		this.dob = dob;
 	}
 	public String getMobileNo() {
@@ -133,10 +133,10 @@ public class CustomerDto {
 	public void setAdharNo(String adharNo) {
 		this.adharNo = adharNo;
 	}
-	public Date getCreatedDate() {
+	public String getCreatedDate() {
 		return createdDate;
 	}
-	public void setCreatedDate(Date createdDate) {
+	public void setCreatedDate(String createdDate) {
 		this.createdDate = createdDate;
 	}
 	public String getImageChangePermission() {
@@ -170,7 +170,7 @@ public class CustomerDto {
 		this.o_id = o_id;
 	}
 	public CustomerDto(Long c_id, String fullName, String userName, String country, String state, String city, String pin,
-			String address, Date dob, String mobileNo, String email, String adharNo, Date createdDate,
+			String address, String dob, String mobileNo, String email, String adharNo, String createdDate,
 			String imageChangePermission, String refPerson, String refPhone, String token_id, String o_id) {
 		super();
 		this.c_id = c_id;

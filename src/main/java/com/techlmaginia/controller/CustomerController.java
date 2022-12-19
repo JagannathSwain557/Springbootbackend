@@ -41,8 +41,8 @@ public class CustomerController {
 
 	@PostMapping(value = "/customer/create", consumes = { "application/xml", "application/json" })
 	public ResponseEntity<CustomerEntity> saveCustomer(@Valid @RequestBody CustomerDto cosDto) throws ParseException {
-		CustomerEntity savedEnquery = cosService.saveCustomer(cosDto);
-		return new ResponseEntity<CustomerEntity>(savedEnquery, HttpStatus.OK);
+		CustomerEntity savedCostomer = cosService.saveCustomer(cosDto);
+		return new ResponseEntity<CustomerEntity>(savedCostomer, HttpStatus.OK);
 	}
 	@GetMapping("/customer/getall")
 	public ResponseEntity<List<CustomerEntity>> getAllCustomers() {
@@ -58,8 +58,8 @@ public class CustomerController {
     @PutMapping("/customer/update/{c_id}")
     public ResponseEntity<CustomerEntity> updateCustomer(@PathVariable(value = "c_id") Long c_id,
          @RequestBody CustomerDto customerDetails) throws ParseException {
-    	CustomerEntity savedEnquery = cosService.updateCustomer(customerDetails,c_id);
-		return new ResponseEntity<CustomerEntity>(savedEnquery, HttpStatus.OK);
+    	CustomerEntity savedCostomer = cosService.updateCustomer(customerDetails,c_id);
+		return new ResponseEntity<CustomerEntity>(savedCostomer, HttpStatus.OK);
     }
 
 	
