@@ -139,7 +139,7 @@ public class OwnerService {
 			owner.setRm_types(ownerDetails.getRm_types());
 		}
 		if (ownerDetails.getRating_avg() != null && !ownerDetails.getRating_avg().isEmpty()) {
-			owner.setRating_avg(ownerDetails.getRating_avg());
+			owner.setRating_avg(Double.parseDouble(ownerDetails.getRating_avg()));
 		}
 		if (ownerDetails.getDisabled() != null && !ownerDetails.getDisabled().isEmpty()) {
 			owner.setDisabled(ownerDetails.getDisabled());

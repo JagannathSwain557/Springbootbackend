@@ -36,8 +36,10 @@ public class OwnerEntity {
 	String maxRange;
 	String minRange;
 	String rm_types;
-	String rating_avg;
+	Double rating_avg;
+	Long noOfRatings;
 	String disabled;
+	
 	public Long getO_id() {
 		return o_id;
 	}
@@ -176,10 +178,10 @@ public class OwnerEntity {
 	public void setRm_types(String rm_types) {
 		this.rm_types = rm_types;
 	}
-	public String getRating_avg() {
+	public Double getRating_avg() {
 		return rating_avg;
 	}
-	public void setRating_avg(String rating_avg) {
+	public void setRating_avg(Double rating_avg) {
 		this.rating_avg = rating_avg;
 	}
 	public String getDisabled() {
@@ -188,11 +190,18 @@ public class OwnerEntity {
 	public void setDisabled(String disabled) {
 		this.disabled = disabled;
 	}
+	
+	public Long getNoOfRatings() {
+		return noOfRatings;
+	}
+	public void setNoOfRatings(Long noOfRatings) {
+		this.noOfRatings = noOfRatings;
+	}
 	public OwnerEntity(Long o_id, String fullName, String organization, String country, String state, String city,
 			int pin, Date startedFrom, String location, Long mobileNo, Long altMobile, String o_type, String email,
 			Long adharNo, Date endDate, Date createdDate, String tokenSeries, int totalSeats, int availableSeats,
-			HashMap<String, Long> tokenMap, String maxRange, String minRange, String rm_types, String rating_avg,
-			String disabled) {
+			HashMap<String, Long> tokenMap, String maxRange, String minRange, String rm_types, Double rating_avg,
+			String disabled,Long noOfRatings) {
 		super();
 		this.o_id = o_id;
 		this.fullName = fullName;
@@ -219,6 +228,7 @@ public class OwnerEntity {
 		this.rm_types = rm_types;
 		this.rating_avg = rating_avg;
 		this.disabled = disabled;
+		this.noOfRatings=noOfRatings;
 	}
 	public OwnerEntity() {
 		super();
@@ -250,8 +260,9 @@ public class OwnerEntity {
 		this.maxRange = ownDto.getMaxRange();
 		this.minRange = ownDto.getMinRange();
 		this.rm_types = ownDto.getRm_types();
-		this.rating_avg = ownDto.getRating_avg();
+		this.rating_avg = Double.parseDouble(ownDto.getRating_avg());
 		this.disabled = ownDto.getDisabled();
+		this.noOfRatings=Long.parseLong(ownDto.getNoOfRatings());
 	}
 	
 	

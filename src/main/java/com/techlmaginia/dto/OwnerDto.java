@@ -32,6 +32,7 @@ public class OwnerDto {
 	String rm_types;
 	String rating_avg;
 	String disabled;
+	String noOfRatings;
 	public Long getO_id() {
 		return o_id;
 	}
@@ -183,11 +184,18 @@ public class OwnerDto {
 	public void setAvailableSeats(String availableSeats) {
 		this.availableSeats = availableSeats;
 	}
+	
+	public String getNoOfRatings() {
+		return noOfRatings;
+	}
+	public void setNoOfRatings(String noOfRatings) {
+		this.noOfRatings = noOfRatings;
+	}
 	public OwnerDto(Long o_id, String fullName, String organization, String country, String state, String city,
 			String pin, String startedFrom, String location, String mobileNo, String altMobile, String o_type,
 			String email, String adharNo, String endDate, String createdDate, String tokenSeries, String totalSeats,
 			HashMap<String, Long> tokenMap, String maxRange, String minRange, String rm_types, String rating_avg,
-			String disabled,String availableSeats){
+			String disabled,String availableSeats,String noOfRatings){
 		super();
 		this.o_id = o_id;
 		this.fullName = fullName;
@@ -214,6 +222,7 @@ public class OwnerDto {
 		this.rating_avg = rating_avg;
 		this.disabled = disabled;
 		this.availableSeats=availableSeats;
+		this.noOfRatings=noOfRatings;
 	}
 	public OwnerDto() {
 		super();

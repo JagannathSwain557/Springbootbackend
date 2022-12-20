@@ -4,12 +4,13 @@ import java.util.Date;
 import java.util.List;
 
 import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Repository;
 
 import com.google.cloud.spring.data.datastore.repository.DatastoreRepository;
 import com.google.cloud.spring.data.datastore.repository.query.Query;
 import com.techlmaginia.model.CustomerEntity;
 import com.techlmaginia.model.EnquiryEntity;
-
+@Repository
 public interface CustomerRepository extends DatastoreRepository<CustomerEntity, Long>{
 
 @Query(value="SELECT * FROM CustomerEntity  WHERE o_id=@o_id")
