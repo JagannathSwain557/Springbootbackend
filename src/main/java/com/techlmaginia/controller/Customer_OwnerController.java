@@ -28,7 +28,6 @@ public class Customer_OwnerController {
 	@Autowired
 	Customer_OwnerService cosOwnerService;
 	
-	
 	@GetMapping(value = "/testSuccess")
 	public String test() {
 		return "success";
